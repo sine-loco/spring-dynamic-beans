@@ -1,0 +1,96 @@
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'com.gradle.build-scan' version '1.16'
+    id 'org.springframework.boot' version '2.0.6.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.6.RELEASE'
+}
+
+group = 'ru.snm.misc.spring'
+version = '0.0.1-SNAPSHOT'
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {url 'https://plugins.gradle.org/m2/'}
+}
+
+ext['spring.version'] = '5.1.1.RELEASE'
+ext['spring-aop.version'] = '5.1.1.RELEASE'
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.codehaus.groovy:groovy-all:2.5.3'
+        mavenBom 'org.apache.logging.log4j:log4j:2.11.1'
+        mavenBom 'org.springframework.boot:spring-boot-dependencies:2.0.6.RELEASE'
+    }
+
+    // hell know what 'by rule' sets spring-xxx to version 3.2.18.. so overriding:
+    dependencies {
+        dependencySet( group: 'org.springframework', version: '5.1.1.RELEASE' )  {
+            entry 'spring-aop'
+            entry 'spring-core'
+            entry 'spring-beans'
+            entry 'spring-context'
+            entry 'spring-expression'
+
+            entry 'spring-test'
+        }
+        dependencySet( group: 'org.junit.jupiter', version: '5.3.1' ) {
+            entry 'junit-jupiter-api'
+            entry 'junit-jupiter-engine'
+            entry 'junit-jupiter-params'
+        }
+
+    }
+}
+
+dependencies {
+    implementation(
+            'org.springframework.boot:spring-boot-starter',
+            'org.springframework.boot:spring-boot-starter-actuator',
+            'org.springframework.boot:spring-boot-starter-activemq',
+
+            'org.apache.logging.log4j:log4j-core',
+            'org.apache.logging.log4j:log4j-api',
+    )
+
+    testImplementation(
+            'org.springframework.boot:spring-boot-starter-test',
+
+            'org.junit.jupiter:junit-jupiter-api',
+            'org.junit.jupiter:junit-jupiter-engine',
+            'org.junit.jupiter:junit-jupiter-params',
+    )
+}
+
+
+tasks.withType( JavaCompile ) {
+    options.encoding = 'UTF-8'
+    options.compilerArgs += '-proc:none'
+}
+
+task testJUnitJupiter(type: Test) {
+    description = "Runs JUnit Jupiter tests."
+    useJUnitPlatform {
+        includeEngines "junit-jupiter"
+        excludeTags "failing-test-case"
+    }
+    filter {
+        includeTestsMatching "org.springframework.test.context.junit.jupiter.*"
+    }
+    reports.junitXml.destination = file("$buildDir/test-results")
+    // Java Util Logging for the JUnit Platform.
+    // systemProperty("java.util.logging.manager", "org.apache.logging.log4j.jul.LogManager")
+}
+
+
+buildScan {
+    termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+    termsOfServiceAgree = 'yes'
+
+    publishAlways()
+}

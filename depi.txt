@@ -1,0 +1,417 @@
+Initialized native services in: C:\Users\Котище\.gradle\native
+Found daemon DaemonInfo{pid=15456, address=[8631079c-29b7-4519-bb55-c54056008bf2 port:56295, addresses:[/127.0.0.1, /0:0:0:0:0:0:0:1]], state=Idle, lastBusy=1540675834677, context=DefaultDaemonContext[uid=50183dbc-5f4b-4eb6-9a06-3741d4b7b58d,javaHome=C:\Program Files\Java\jdk-11,daemonRegistryDir=C:\Users\Котище\.gradle\daemon,pid=15456,idleTimeout=10800000,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=windows-1251,-Duser.country=RU,-Duser.language=ru,-Duser.variant]} however its context does not match the desired criteria.
+Java home is different.
+Wanted: DefaultDaemonContext[uid=null,javaHome=D:\softwoinst\java\x64\jdk1.8.0_152,daemonRegistryDir=C:\Users\Котище\.gradle\daemon,pid=2816,idleTimeout=null,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=windows-1251,-Duser.country=RU,-Duser.language=ru,-Duser.variant]
+Actual: DefaultDaemonContext[uid=50183dbc-5f4b-4eb6-9a06-3741d4b7b58d,javaHome=C:\Program Files\Java\jdk-11,daemonRegistryDir=C:\Users\Котище\.gradle\daemon,pid=15456,idleTimeout=10800000,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=windows-1251,-Duser.country=RU,-Duser.language=ru,-Duser.variant]
+
+  Looking for a different daemon...
+The client will now receive all logging from the daemon (pid: 9460). The daemon log file: C:\Users\Котище\.gradle\daemon\4.10.2\daemon-9460.out.log
+Starting 4th build in daemon [uptime: 1 mins 50.684 secs, performance: 99%, no major garbage collections]
+Using 8 worker leases.
+Invalidating in-memory cache of D:\dev\src\misc\spring-dynamic-beans\.gradle\4.10.2\fileHashes\fileHashes.bin
+Starting Build
+Invalidating in-memory cache of C:\Users\Котище\.gradle\caches\4.10.2\fileHashes\fileHashes.bin
+Invalidating in-memory cache of C:\Users\Котище\.gradle\caches\4.10.2\fileHashes\resourceHashesCache.bin
+Settings evaluated using settings file 'D:\dev\src\misc\spring-dynamic-beans\settings.gradle'.
+Projects loaded. Root project using build file 'D:\dev\src\misc\spring-dynamic-beans\build.gradle'.
+Included projects: [root project 'spring-dynamic-beans']
+
+> Configure project :
+Evaluating root project 'spring-dynamic-beans' using build file 'D:\dev\src\misc\spring-dynamic-beans\build.gradle'.
+Invalidating in-memory cache of C:\Users\Котище\.gradle\caches\journal-1\file-access.bin
+Applying dependency management to configuration 'bootArchives' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'archives' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'default' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'compile' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'implementation' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'runtime' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'compileOnly' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'compileClasspath' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'annotationProcessor' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'runtimeOnly' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'runtimeClasspath' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'testCompile' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'testImplementation' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'testRuntime' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'testCompileOnly' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'testCompileClasspath' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'testAnnotationProcessor' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'testRuntimeOnly' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'testRuntimeClasspath' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'apiElements' in project 'spring-dynamic-beans'
+Applying dependency management to configuration 'runtimeElements' in project 'spring-dynamic-beans'
+All projects evaluated.
+Selected primary task 'dependencyInsight' from project :
+Tasks to be executed: [task ':dependencyInsight']
+:dependencyInsight (Thread[Task worker for ':',5,main]) started.
+Invalidating in-memory cache of D:\dev\src\misc\spring-dynamic-beans\.gradle\4.10.2\fileHashes\resourceHashesCache.bin
+Invalidating in-memory cache of D:\dev\src\misc\spring-dynamic-beans\.gradle\4.10.2\taskHistory\taskHistory.bin
+Invalidating in-memory cache of D:\dev\src\misc\spring-dynamic-beans\.gradle\buildOutputCleanup\outputFiles.bin
+
+> Task :dependencyInsight
+Task ':dependencyInsight' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Resolving global dependency management for project 'spring-dynamic-beans'
+Excluding []
+org.springframework:spring-aop:5.1.1.RELEASE (selected by rule)
+   variant "runtime" [
+      org.gradle.status = release (not requested)
+      Requested attributes not found in the selected variant:
+         org.gradle.usage  = java-api
+   ]
+
+org.springframework:spring-aop:5.1.1.RELEASE
+\--- org.springframework:spring-context:5.1.1.RELEASE
+     +--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE
+     |    \--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE
+     |         \--- compileClasspath
+     \--- org.springframework.boot:spring-boot:2.0.6.RELEASE
+          +--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE
+          |    +--- compileClasspath
+          |    +--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE (*)
+          |    \--- org.springframework.boot:spring-boot-starter-activemq:2.0.6.RELEASE
+          |         \--- compileClasspath
+          +--- org.springframework.boot:spring-boot-autoconfigure:2.0.6.RELEASE
+          |    +--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE (*)
+          |    \--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE (*)
+          \--- org.springframework.boot:spring-boot-actuator:2.0.6.RELEASE
+               \--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE (*)
+
+org.springframework:spring-beans:5.1.1.RELEASE (selected by rule)
+   variant "runtime" [
+      org.gradle.status = release (not requested)
+      Requested attributes not found in the selected variant:
+         org.gradle.usage  = java-api
+   ]
+
+org.springframework:spring-beans:5.1.1.RELEASE
++--- org.springframework:spring-aop:5.1.1.RELEASE
+|    \--- org.springframework:spring-context:5.1.1.RELEASE
+|         +--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE
+|         |    \--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE
+|         |         \--- compileClasspath
+|         \--- org.springframework.boot:spring-boot:2.0.6.RELEASE
+|              +--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE
+|              |    +--- compileClasspath
+|              |    +--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE (*)
+|              |    \--- org.springframework.boot:spring-boot-starter-activemq:2.0.6.RELEASE
+|              |         \--- compileClasspath
+|              +--- org.springframework.boot:spring-boot-autoconfigure:2.0.6.RELEASE
+|              |    +--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE (*)
+|              |    \--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE (*)
+|              \--- org.springframework.boot:spring-boot-actuator:2.0.6.RELEASE
+|                   \--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE (*)
++--- org.springframework:spring-context:5.1.1.RELEASE (*)
++--- org.springframework:spring-jms:5.1.1.RELEASE
+|    \--- org.springframework.boot:spring-boot-starter-activemq:2.0.6.RELEASE (*)
++--- org.springframework:spring-messaging:5.1.1.RELEASE
+|    \--- org.springframework:spring-jms:5.1.1.RELEASE (*)
+\--- org.springframework:spring-tx:5.1.1.RELEASE
+     \--- org.springframework:spring-jms:5.1.1.RELEASE (*)
+
+org.springframework:spring-context:5.1.1.RELEASE (selected by rule)
+   variant "runtime" [
+      org.gradle.status = release (not requested)
+      Requested attributes not found in the selected variant:
+         org.gradle.usage  = java-api
+   ]
+
+org.springframework:spring-context:5.0.10.RELEASE -> 5.1.1.RELEASE
++--- org.springframework.boot:spring-boot:2.0.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE
+|    |    +--- compileClasspath
+|    |    +--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE
+|    |    |    \--- compileClasspath
+|    |    \--- org.springframework.boot:spring-boot-starter-activemq:2.0.6.RELEASE
+|    |         \--- compileClasspath
+|    +--- org.springframework.boot:spring-boot-autoconfigure:2.0.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE (*)
+|    |    \--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE
+|    |         \--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE (*)
+|    \--- org.springframework.boot:spring-boot-actuator:2.0.6.RELEASE
+|         \--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE (*)
+\--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE (*)
+
+org.springframework:spring-core:5.1.1.RELEASE (selected by rule)
+   variant "runtime" [
+      org.gradle.status = release (not requested)
+      Requested attributes not found in the selected variant:
+         org.gradle.usage  = java-api
+   ]
+
+org.springframework:spring-core:5.1.1.RELEASE
++--- org.springframework:spring-aop:5.1.1.RELEASE
+|    \--- org.springframework:spring-context:5.1.1.RELEASE
+|         +--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE
+|         |    \--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE
+|         |         \--- compileClasspath
+|         \--- org.springframework.boot:spring-boot:2.0.6.RELEASE
+|              +--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE
+|              |    +--- compileClasspath
+|              |    +--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE (*)
+|              |    \--- org.springframework.boot:spring-boot-starter-activemq:2.0.6.RELEASE
+|              |         \--- compileClasspath
+|              +--- org.springframework.boot:spring-boot-autoconfigure:2.0.6.RELEASE
+|              |    +--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE (*)
+|              |    \--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE (*)
+|              \--- org.springframework.boot:spring-boot-actuator:2.0.6.RELEASE
+|                   \--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE (*)
++--- org.springframework:spring-beans:5.1.1.RELEASE
+|    +--- org.springframework:spring-jms:5.1.1.RELEASE
+|    |    \--- org.springframework.boot:spring-boot-starter-activemq:2.0.6.RELEASE (*)
+|    +--- org.springframework:spring-context:5.1.1.RELEASE (*)
+|    +--- org.springframework:spring-messaging:5.1.1.RELEASE
+|    |    \--- org.springframework:spring-jms:5.1.1.RELEASE (*)
+|    +--- org.springframework:spring-tx:5.1.1.RELEASE
+|    |    \--- org.springframework:spring-jms:5.1.1.RELEASE (*)
+|    \--- org.springframework:spring-aop:5.1.1.RELEASE (*)
++--- org.springframework:spring-context:5.1.1.RELEASE (*)
++--- org.springframework:spring-expression:5.1.1.RELEASE
+|    \--- org.springframework:spring-context:5.1.1.RELEASE (*)
++--- org.springframework:spring-jms:5.1.1.RELEASE (*)
++--- org.springframework:spring-messaging:5.1.1.RELEASE (*)
+\--- org.springframework:spring-tx:5.1.1.RELEASE (*)
+
+org.springframework:spring-core:5.0.10.RELEASE -> 5.1.1.RELEASE
++--- org.springframework.boot:spring-boot:2.0.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE
+|    |    +--- compileClasspath
+|    |    +--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE
+|    |    |    \--- compileClasspath
+|    |    \--- org.springframework.boot:spring-boot-starter-activemq:2.0.6.RELEASE
+|    |         \--- compileClasspath
+|    +--- org.springframework.boot:spring-boot-autoconfigure:2.0.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE (*)
+|    |    \--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE
+|    |         \--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE (*)
+|    \--- org.springframework.boot:spring-boot-actuator:2.0.6.RELEASE
+|         \--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE (*)
++--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE (*)
+\--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE (*)
+
+org.springframework:spring-expression:5.1.1.RELEASE (selected by rule)
+   variant "runtime" [
+      org.gradle.status = release (not requested)
+      Requested attributes not found in the selected variant:
+         org.gradle.usage  = java-api
+   ]
+
+org.springframework:spring-expression:5.1.1.RELEASE
+\--- org.springframework:spring-context:5.1.1.RELEASE
+     +--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE
+     |    \--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE
+     |         \--- compileClasspath
+     \--- org.springframework.boot:spring-boot:2.0.6.RELEASE
+          +--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE
+          |    +--- compileClasspath
+          |    +--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE (*)
+          |    \--- org.springframework.boot:spring-boot-starter-activemq:2.0.6.RELEASE
+          |         \--- compileClasspath
+          +--- org.springframework.boot:spring-boot-autoconfigure:2.0.6.RELEASE
+          |    +--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE (*)
+          |    \--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE (*)
+          \--- org.springframework.boot:spring-boot-actuator:2.0.6.RELEASE
+               \--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE (*)
+
+org.springframework:spring-jcl:5.1.1.RELEASE (selected by rule)
+   variant "runtime" [
+      org.gradle.status = release (not requested)
+      Requested attributes not found in the selected variant:
+         org.gradle.usage  = java-api
+   ]
+
+org.springframework:spring-jcl:5.1.1.RELEASE
+\--- org.springframework:spring-core:5.1.1.RELEASE
+     +--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE
+     |    +--- compileClasspath
+     |    +--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE
+     |    |    \--- compileClasspath
+     |    \--- org.springframework.boot:spring-boot-starter-activemq:2.0.6.RELEASE
+     |         \--- compileClasspath
+     +--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE
+     |    \--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE (*)
+     +--- org.springframework.boot:spring-boot:2.0.6.RELEASE
+     |    +--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE (*)
+     |    +--- org.springframework.boot:spring-boot-autoconfigure:2.0.6.RELEASE
+     |    |    +--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE (*)
+     |    |    \--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE (*)
+     |    \--- org.springframework.boot:spring-boot-actuator:2.0.6.RELEASE
+     |         \--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE (*)
+     +--- org.springframework:spring-jms:5.1.1.RELEASE
+     |    \--- org.springframework.boot:spring-boot-starter-activemq:2.0.6.RELEASE (*)
+     +--- org.springframework:spring-context:5.1.1.RELEASE
+     |    +--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE (*)
+     |    \--- org.springframework.boot:spring-boot:2.0.6.RELEASE (*)
+     +--- org.springframework:spring-messaging:5.1.1.RELEASE
+     |    \--- org.springframework:spring-jms:5.1.1.RELEASE (*)
+     +--- org.springframework:spring-tx:5.1.1.RELEASE
+     |    \--- org.springframework:spring-jms:5.1.1.RELEASE (*)
+     +--- org.springframework:spring-aop:5.1.1.RELEASE
+     |    \--- org.springframework:spring-context:5.1.1.RELEASE (*)
+     +--- org.springframework:spring-beans:5.1.1.RELEASE
+     |    +--- org.springframework:spring-jms:5.1.1.RELEASE (*)
+     |    +--- org.springframework:spring-context:5.1.1.RELEASE (*)
+     |    +--- org.springframework:spring-messaging:5.1.1.RELEASE (*)
+     |    +--- org.springframework:spring-tx:5.1.1.RELEASE (*)
+     |    \--- org.springframework:spring-aop:5.1.1.RELEASE (*)
+     \--- org.springframework:spring-expression:5.1.1.RELEASE
+          \--- org.springframework:spring-context:5.1.1.RELEASE (*)
+
+org.springframework:spring-jms:5.1.1.RELEASE (selected by rule)
+   variant "runtime" [
+      org.gradle.status = release (not requested)
+      Requested attributes not found in the selected variant:
+         org.gradle.usage  = java-api
+   ]
+
+org.springframework:spring-jms:5.0.10.RELEASE -> 5.1.1.RELEASE
+\--- org.springframework.boot:spring-boot-starter-activemq:2.0.6.RELEASE
+     \--- compileClasspath
+
+org.springframework:spring-messaging:5.1.1.RELEASE (selected by rule)
+   variant "runtime" [
+      org.gradle.status = release (not requested)
+      Requested attributes not found in the selected variant:
+         org.gradle.usage  = java-api
+   ]
+
+org.springframework:spring-messaging:5.1.1.RELEASE
+\--- org.springframework:spring-jms:5.1.1.RELEASE
+     \--- org.springframework.boot:spring-boot-starter-activemq:2.0.6.RELEASE
+          \--- compileClasspath
+
+org.springframework:spring-tx:5.1.1.RELEASE (selected by rule)
+   variant "runtime" [
+      org.gradle.status = release (not requested)
+      Requested attributes not found in the selected variant:
+         org.gradle.usage  = java-api
+   ]
+
+org.springframework:spring-tx:5.1.1.RELEASE
+\--- org.springframework:spring-jms:5.1.1.RELEASE
+     \--- org.springframework.boot:spring-boot-starter-activemq:2.0.6.RELEASE
+          \--- compileClasspath
+
+org.springframework.boot:spring-boot:2.0.6.RELEASE (selected by rule)
+   variant "runtime" [
+      org.gradle.status = release (not requested)
+      Requested attributes not found in the selected variant:
+         org.gradle.usage  = java-api
+   ]
+
+org.springframework.boot:spring-boot:2.0.6.RELEASE
++--- org.springframework.boot:spring-boot-actuator:2.0.6.RELEASE
+|    \--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE
+|         \--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE
+|              \--- compileClasspath
++--- org.springframework.boot:spring-boot-autoconfigure:2.0.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE
+|    |    +--- compileClasspath
+|    |    +--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE (*)
+|    |    \--- org.springframework.boot:spring-boot-starter-activemq:2.0.6.RELEASE
+|    |         \--- compileClasspath
+|    \--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE (*)
+\--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE (*)
+
+org.springframework.boot:spring-boot-actuator:2.0.6.RELEASE (selected by rule)
+   variant "runtime" [
+      org.gradle.status = release (not requested)
+      Requested attributes not found in the selected variant:
+         org.gradle.usage  = java-api
+   ]
+
+org.springframework.boot:spring-boot-actuator:2.0.6.RELEASE
+\--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE
+     \--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE
+          \--- compileClasspath
+
+org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE (selected by rule)
+   variant "runtime" [
+      org.gradle.status = release (not requested)
+      Requested attributes not found in the selected variant:
+         org.gradle.usage  = java-api
+   ]
+
+org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE
+\--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE
+     \--- compileClasspath
+
+org.springframework.boot:spring-boot-autoconfigure:2.0.6.RELEASE (selected by rule)
+   variant "runtime" [
+      org.gradle.status = release (not requested)
+      Requested attributes not found in the selected variant:
+         org.gradle.usage  = java-api
+   ]
+
+org.springframework.boot:spring-boot-autoconfigure:2.0.6.RELEASE
++--- org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.6.RELEASE
+|    \--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE
+|         \--- compileClasspath
+\--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE
+     +--- compileClasspath
+     +--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE (*)
+     \--- org.springframework.boot:spring-boot-starter-activemq:2.0.6.RELEASE
+          \--- compileClasspath
+
+org.springframework.boot:spring-boot-starter:2.0.6.RELEASE (selected by rule)
+   variant "default+runtime" [
+      org.gradle.status = release (not requested)
+      Requested attributes not found in the selected variant:
+         org.gradle.usage  = java-api
+   ]
+
+org.springframework.boot:spring-boot-starter:2.0.6.RELEASE
++--- org.springframework.boot:spring-boot-starter-activemq:2.0.6.RELEASE
+|    \--- compileClasspath
+\--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE
+     \--- compileClasspath
+
+org.springframework.boot:spring-boot-starter -> 2.0.6.RELEASE
+\--- compileClasspath
+
+org.springframework.boot:spring-boot-starter-activemq:2.0.6.RELEASE (selected by rule)
+   variant "default" [
+      org.gradle.status = release (not requested)
+      Requested attributes not found in the selected variant:
+         org.gradle.usage  = java-api
+   ]
+
+org.springframework.boot:spring-boot-starter-activemq -> 2.0.6.RELEASE
+\--- compileClasspath
+
+org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE (selected by rule)
+   variant "default" [
+      org.gradle.status = release (not requested)
+      Requested attributes not found in the selected variant:
+         org.gradle.usage  = java-api
+   ]
+
+org.springframework.boot:spring-boot-starter-actuator -> 2.0.6.RELEASE
+\--- compileClasspath
+
+org.springframework.boot:spring-boot-starter-logging:2.0.6.RELEASE (selected by rule)
+   variant "runtime" [
+      org.gradle.status = release (not requested)
+      Requested attributes not found in the selected variant:
+         org.gradle.usage  = java-api
+   ]
+
+org.springframework.boot:spring-boot-starter-logging:2.0.6.RELEASE
+\--- org.springframework.boot:spring-boot-starter:2.0.6.RELEASE
+     +--- compileClasspath
+     +--- org.springframework.boot:spring-boot-starter-actuator:2.0.6.RELEASE
+     |    \--- compileClasspath
+     \--- org.springframework.boot:spring-boot-starter-activemq:2.0.6.RELEASE
+          \--- compileClasspath
+
+(*) - dependencies omitted (listed previously)
+
+A web-based, searchable dependency report is available by adding the --scan option.
+:dependencyInsight (Thread[Task worker for ':',5,main]) completed. Took 0.73 secs.
+
+BUILD SUCCESSFUL in 1s
+1 actionable task: 1 executed
+
+Publishing build scan...
+https://gradle.com/s/w5owkhfjzjr4g
+

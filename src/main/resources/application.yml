@@ -1,0 +1,29 @@
+
+some-other-case:
+  broker-url: localhost
+  username: admin
+  password: admin
+
+case-02:
+  broker-url: localhost
+  username: admin
+  password: admin
+
+case-01:
+  broker-url: localhost
+  username: admin
+  password: admin
+
+# expose actuator endpoint via HTTP
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - info
+          - health
+
+    # show verbose health details (/actuator/info) so you can see Camel information also
+  endpoint:
+    health:
+      show-details: always
