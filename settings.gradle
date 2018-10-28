@@ -1,1 +1,3 @@
 rootProject.name = 'spring-dynamic-beans'
+
+enableFeaturePreview('IMPROVED_POM_SUPPORT')
